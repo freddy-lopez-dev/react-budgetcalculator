@@ -1,11 +1,11 @@
 import ExpenseList from "./ExpenseList";
-import Form from "./Form";
+import AddTransactForm from "./AddTransactForm";
 import IncomeList from "./IncomeList";
 
 const Bottom = (props) => {
   return (
     <div className="bottom">
-      <Form />
+      <AddTransactForm />
       <div className="container">
         <IncomeList />
         <ExpenseList />

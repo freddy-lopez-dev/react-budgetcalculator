@@ -5,7 +5,12 @@ const IncomeList = (props) => {
     <div className="income">
       <h2 className="icome__title">Income</h2>
       <div className="income__list">
-        <Income />
+        <Income
+          id="0"
+          description={"Paycheck"}
+          amount={250.55}
+          date={"Apr. 21st, 2022"}
+        />
       </div>
     </div>
   );

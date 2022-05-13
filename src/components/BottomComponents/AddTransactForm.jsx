@@ -1,4 +1,4 @@
-const Form = (props) => {
+const AddTransactForm = (props) => {
   return (
     <div className="add">
       <div className="add__container">
@@ -16,4 +16,4 @@ const Form = (props) => {
   );
 };
 
-export default Form;
+export default AddTransactForm;
