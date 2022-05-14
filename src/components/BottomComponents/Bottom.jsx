@@ -11,7 +11,13 @@ const Bottom = (props) => {
       id: 0,
       description: "My salary",
       amount: 3000.0,
-      Date: formatDate,
+      date: formatDate,
+    },
+    {
+      id: 2,
+      description: "Credit Card payment",
+      amount: -200.0,
+      date: formatDate,
     },
   ];
 
@@ -32,14 +38,26 @@ const Bottom = (props) => {
         ...prevState,
       ];
     });
-    console.log(transactionList);
   };
+
+  const deleteTransactionHandler = (id) => {
+    setTransactionList((prevState) => {
+      return prevState.filter((transaction) => transaction.id !== +id);
+    });
+  };
+
+  const incomes = transactionList.filter((transaction) => {
+    return transaction.amount >= 0;
+  });
 
   return (
     <div className="bottom">
       <AddTransactForm addTransaction={addTransactionHandler} />
       <div className="container">
-        <IncomeList />
+        <IncomeList
+          listOfIncome={incomes}
+          deleteTransaction={deleteTransactionHandler}
+        />
         <ExpenseList />
       </div>
     </div>

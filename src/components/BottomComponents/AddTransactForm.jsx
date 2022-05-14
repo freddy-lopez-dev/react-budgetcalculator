@@ -12,8 +12,11 @@ const AddTransactForm = (props) => {
     setAmount(event.target.value);
   };
 
-  const onClickHandler = () => {
+  const onClickHandler = (event) => {
+    // Add validation if no values entered
     props.addTransaction(inputDescription, inputAmount);
+    setDescription("");
+    setAmount("");
   };
 
   return (
